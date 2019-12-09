@@ -1,7 +1,6 @@
 
 body{
-   display: inline-block;
-   margin: auto;
+   display: grid | inline-grid;
 }
 
 /* ************************************mobile********************************** */
@@ -9,9 +8,105 @@ body{
 
   #big-box 
 {
+  display: inline-grid;
+  justify-content: center;
+  grid-template-columns: 
+grid-template-rows:
+  /* grid-template-columns: repeat(1, 1fr); */
+  grid-gap: 0px;
+  /* grid-auto-rows: minmax(100px, auto); */
 
+/* 
+  width: 480px;
+  margin: 120px; */
+} 
+
+  #box-a {
+    background-color: red;
+    width: 480px;
+    height: 75px;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+  }
+
+  
+  #box-b {
+    background-color: yellow;
+    width: 480px;
+    height: 150px;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+  
+  }
+  
+  #box-c {
+    background-color: green;
+    width: 480px;
+    height: 125px;
+    grid-column: 1 / 4;
+    grid-row: 3 / 3;
+  
+  }
+  
+  #box-d {
+  
+    background-color: blue; 
+    width: 480px;
+    height: 125px;
+    grid-column: 4 / 4;
+    grid-row: 3 / 3;
+   
+  }
+  
+  #box-e {
+    background-color: lightblue;
+    width: 240px;
+    height: 250px;
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+ 
+  }
+  
+  #box-f {
+    background-color: lightcoral;
+    width: 240px;
+    height: 250px;
+
+  }
+  
+  #box-g {
+    background-color: lightcyan;
+    width: 240px;
+    height: 250px;
+
+  }
+  
+  #box-h {
+    background-color: lightpink;
+    width: 240px;
+    height: 250px;
+  
+  }
+  
+  #box-i {
+    background-color: orange;
+    width: 480px;
+    height: 80px;
+  }
+}
+
+/*************************************TABLET VIEWPORT*****************************************/
+
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  #big-box 
+{
   width: 480px;
   margin: 120px;
+
 } 
 
   #box-a {
@@ -104,13 +199,11 @@ body{
   }
 }
 
-/*************************************TABLET VIEWPORT*****************************************/
-
 
 
 
 /****************************************** DESKTOP VIEWPORT *****************************************/
-@media only screen and (min-width:768px){
+@media only screen and (min-width:1024px){
 
 body{
   margin: 200px;
@@ -118,7 +211,10 @@ body{
 
   #big-box 
 { 
-  width: 960px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0px;
+  grid-auto-rows: minmax(100px, auto);
 } 
 
 #box-a {
